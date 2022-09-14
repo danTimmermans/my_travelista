@@ -74,7 +74,7 @@
         flex-direction: column;
         justify-content: center;
         height: 70vh;
-        a{
+        .mainTitle-btn{
             @extend .btn;
             @extend .btn-yellow;
             @include center();
@@ -85,9 +85,9 @@
     .pageTitle{
         height: 20vh;
         align-items: center;
-        .breadCrums  i{
+        .breadCrumbs  i{
             @include padding("left-right", 5px)
-        } 
+        }
     }
     .menu-pop{
         display: flex;

@@ -1,0 +1,36 @@
+// bg section affordable prices
+.bgWorld{
+    background: url('../img/price-bg.png')center/cover;
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(65,62,62,.3);
+        z-index: -10000;
+    }
+}
+.prices{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    @include padding('all', 1em);
+    a{
+        color: color('black');
+        @extend .btn;
+        @extend .btn-grey;
+    }
+}
+.wrap{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+}
+.package-bg{
+    background-color: color('white');
+    margin-top: 1em;
+}
