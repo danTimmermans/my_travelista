@@ -16,10 +16,12 @@
     }
     .input_cell{
         display: flex;
+        max-width: 80%;
         input, i{
             @include padding("all", .5em); 
         }
         input{
+            width: 90%;
             border: none;
         }
         i{
