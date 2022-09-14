@@ -1,0 +1,137 @@
+
+.homeHeader{
+    background: url('../img/hero-bg.jpg') center/cover;
+    height: 100vh;
+}
+.pageHeader{
+    background: url('../img/hero-bg.jpg') center/cover;
+    height: 40vh;
+}
+#mainHeader{
+    h1, a, p, i, span {
+        color: color('white');
+    }
+    padding: space(5);
+    .upperNav{
+        @include display-grid(); 
+        grid-template-columns: 250px 1fr;            
+        nav, div{
+            display: flex;
+            align-items: center;
+            a{
+                @include padding("all", .5em);
+            }
+        }
+        #socialNav{
+            justify-content: flex-end;
+        }
+    }
+    .lowerNav{
+        background-color: rgba(248,247,247,.2);
+        @include display-grid(); 
+        grid-template-columns: 150px 1fr 50px;
+        nav, div{
+            display: flex;
+            align-items: center;
+            a{
+                display: none;
+                @include padding("all");
+            }
+            img{
+                @include padding("all");
+            }
+        }
+        #mainNav{
+            justify-content: flex-end;
+        }
+        #menuToggle{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            &:hover{
+                cursor: pointer;
+            }
+            @include padding("top-bottom");
+            div{
+                width: 20px;
+                border: 1px solid map-get($colors, "white");
+            }
+        } 
+        // responsive MD and up
+        @include media-breakpoint-up("md"){
+            #menuToggle{
+                display: none;
+            }
+            nav {
+                a{
+                    display: flex;
+                }
+            }
+        }    
+    }
+    .mainTitle{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 70vh;
+        a{
+            @extend .btn;
+            @extend .btn-yellow;
+            @include center();
+            width: 120px;
+            margin-top: space();
+        }
+    }
+    .pageTitle{
+        height: 20vh;
+        align-items: center;
+        .breadCrums  i{
+            @include padding("left-right", 5px)
+        } 
+    }
+    .menu-pop{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(17, 16, 16, 0.7);
+        transform: translateX(-100%);
+        @include mytrans(.5s);
+        .pop-links{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+            height: 100vh;
+            background-color: color('black');
+            a{
+                @include padding("all");
+            }
+        }
+    }
+    .open{
+        transform: translateX(0);
+    }
+    // responsive LG and up
+    @include media-breakpoint-up("lg"){
+        .wrapper{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .mainTitle{
+            width: 60%;
+            p{
+            @include padding("bottom", 3em);
+
+            }
+            a{
+                margin: 0;
+            }
+        }
+    }
+}
+
