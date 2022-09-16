@@ -118,17 +118,19 @@
     }
     // responsive LG and up
     @include media-breakpoint-up("lg"){
-        .wrapper{
-            width: 80%;
-            margin: 0 auto;
-        }
         .mainTitle{
             width: 60%;
-            p{
-            @include padding("bottom", 3em);
-
+            h1{
+                font-size: 3em;
+                margin: 0;
             }
-            a{
+            p{
+                line-height: 2em;
+            }
+            p, a{
+                @include padding("top-bottom");
+            }
+            .mainTitle-btn{
                 margin: 0;
             }
         }

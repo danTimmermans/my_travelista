@@ -29,13 +29,111 @@ main div{
     p{
         text-align: center;
     }
+    @include media-breakpoint-up("lg"){
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: map-get($spaces , 3);
+        grid-template-rows: 40px 40px 300px;
+        h2{
+            grid-column: 1 / 5;
+            margin: 0 auto;
+        }
+        p{
+            grid-row: 2 / 3;
+            grid-column: 1 / 5;
+        }
+        .item-1, .item-2, .item-3{
+            grid-row: 3 / 4;
+        }
+    }
+    @include media-breakpoint-up("xxl"){
+        grid-template-rows: 40px 40px 400px;
+    }
+}
+#affordable-prices.sectionContent{
+    @include media-breakpoint-up("lg"){
+        grid-template-rows: 40px 40px 600px;
+    }
+    
+}
+#helpYou.sectionContent{
+    .pic-effect{
+        transition: all .2s ease-in-out;
+        width: 100%;
+        a{
+            display: block;
+            margin-top: 1em;
+            text-align: center;
+        }
+        padding: 0;       
+        .pic{
+            overflow: hidden;
+            padding: 0;
+        }
+        &:hover{
+            img{
+                transform: scale(1.2) rotate(5deg);
+            }
+            a{
+                color: map-get($colors, 'yellow' );
+            }
+        }
+    }
+    @include media-breakpoint-up("md"){
+        // .pic{
+        //     height: 242px;
+        // }
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+        grid-template-rows: 40px 40px 368px 368px;
+        h2{
+            grid-column: 1 / 3;
+            margin: 0 auto;
+        }
+        p{
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+        }
+    }
+    @include media-breakpoint-up("lg"){
+        // .pic{
+        //     height: 326px;
+        // }
+        grid-template-rows: 40px 40px 600px 368px;
+    }
+    @include media-breakpoint-up("xl"){
+        // .pic{
+        //     height: 180px;
+        // }
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 40px 40px 400px;
+        h2{
+            grid-column: 1 / 5;
+        }
+        p{
+            grid-column: 1 / 5;
+            grid-row: 2 / 3;
+        }
+        .pic-effect{
+            grid-row: 3 / 4;
+        }
+    }
 }
 .pic{
     width: 100%;
+    img{
+        transition: all .2s ease-in-out;
+    }
 }
 .card{
     position: relative;
     @include padding('top');
+    &:hover{
+        .prices-yellow{
+            opacity: 1;
+        }
+    }
 }
 .cardTitle{
     position: absolute;
@@ -48,6 +146,30 @@ main div{
     padding: 0;
     h3, span{
         color: color('white');
+    }
+    @include media-breakpoint-up("md"){
+        h3{
+            font-size: map-get($heading-font-sizes , 2 );;
+        } 
+        span{
+            font-size: map-get($font-sizes , "lg" );
+        } 
+    }
+    @include media-breakpoint-up("lg"){
+        h3{
+            font-size: map-get($heading-font-sizes , 4 );;
+        } 
+        span{
+            font-size: map-get($font-sizes , "md" );
+        } 
+    }
+    @include media-breakpoint-up("xxl"){
+        h3{
+            font-size: map-get($heading-font-sizes , 2 );;
+        } 
+        span{
+            font-size: map-get($font-sizes , "lg" );
+        } 
     }
 }
 
