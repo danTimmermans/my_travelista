@@ -21,6 +21,10 @@ img{
 main div{
     padding: space(5);
 }
+:root{
+    // target the color of the swipper btn and nav dots
+    --swiper-theme-color: #f8b600;
+}
 .sectionContent{
     display: flex;
     flex-direction: column;
