@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/styles.min.css">
     <title>home</title>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js" defer></script>
     <script src="js/index.js" defer></script>
 </head>
 <body>
@@ -58,7 +61,7 @@
     <main>
         <!-- popular destinations -->
         <section >
-            <div class=" sectionContent">
+            <div class="sectionContent">
                 <h2>Popular Destinations</h2>
                 <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast, day.</p>
                 <div class="pic card item-1">
@@ -184,7 +187,7 @@
         <!-- other issues we ca help you with -->
         <section >
             <div id="helpYou" class=" sectionContent">
-                <h2>other issues we ca help you with </h2>
+                <h2>other issues we can help you with </h2>
                 <p>We all live in an age that belongs to the young at heart. Life that is.</p>
                 <div class="pic-effect">
                     <div class="pic">
@@ -216,6 +219,59 @@
                 </div>
             </div>
         </section>
+        <!-- testimonial -->
+        <section class="bgTestimonial">
+            <div id="testimonial" >
+                <h2>Testimonial from our Clients</h2>
+                <p>The French Revolution constituted for the conscience of the dominant aristocratic class a fall from</p>
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide swiper-section">
+                            <div class="swiper-pic">
+                                <img src="img/swipper.jpg" alt="girl">
+                            </div>
+                            <div>
+                                <p>Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.</p>
+                                <span>Harriet Maxwell</span>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-section">
+                            <div class="swiper-pic">
+                                <img src="img/swipper.jpg" alt="girl">
+                            </div>
+                            <div>
+                                <p>A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.</p>
+                                <span>Carolyn Craig</span>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                    
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+
     </main>
     <footer id="mainFooter">
         <div class="footerContainer">

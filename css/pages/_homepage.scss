@@ -13,6 +13,10 @@
         z-index: -10000;
     }
 }
+// bg section testimonial
+.bgTestimonial{
+    background-color: color('greyTestimonial');
+}
 .packages{
     display: flex;
     flex-direction: column;
@@ -37,18 +41,18 @@
 .prices-yellow{
     justify-content: center;
     opacity: 1;
+    font-size:  map-get($font-sizes , "xs" );
     position: absolute;
     top: 15%;
     left: 50%;
     transform: translate(-50%,-15%);
-    transition: all .5s ease-in-out;
+    @include mytrans(.5s);
     a{
         color: color('black');
         @extend .btn;
         @extend .btn-yellow;
     }
     @include media-breakpoint-up("md"){
-        opacity: 1;
         a{
             font-size:  map-get($font-sizes , "xl" );
         }
@@ -72,6 +76,115 @@
         }
     }
 }
+#affordable-prices.sectionContent{
+    @include media-breakpoint-up("lg"){
+        grid-template-rows: 40px 40px 600px;
+    }
+    
+}
+// section other issues we ca help you with 
+#helpYou.sectionContent{
+    .pic-effect{
+        @include mytrans(.3s);
+        width: 100%;
+        a{
+            display: block;
+            margin-top: 1em;
+            text-align: center;
+        }
+        padding: 0;       
+        .pic{
+            overflow: hidden;
+            padding: 0;
+        }
+        &:hover{
+            img{
+                transform: scale(1.2) rotate(5deg);
+            }
+            a{
+                color: map-get($colors, 'yellow' );
+            }
+        }
+    }
+    @include media-breakpoint-up("md"){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+        grid-template-rows: 40px 40px 368px 368px;
+        h2{
+            grid-column: 1 / 3;
+            margin: 0 auto;
+        }
+        p{
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+        }
+    }
+    @include media-breakpoint-up("lg"){
+        grid-template-rows: 40px 40px 600px 368px;
+    }
+    @include media-breakpoint-up("xl"){
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 40px 40px 400px;
+        h2{
+            grid-column: 1 / 5;
+        }
+        p{
+            grid-column: 1 / 5;
+            grid-row: 2 / 3;
+        }
+        .pic-effect{
+            grid-row: 3 / 4;
+        }
+    }
+}
+// section testimonial
+#testimonial{
+    div{
+        padding: 0;
+    }
+    h2, p{
+        text-align: center;
+    }
+    .swiper{
+        height: 300px;
+        background-color: #fff;
+        .swiper-section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            div{
+                width: 70%;
+            }
+            @include media-breakpoint-up("xl"){
+                flex-direction: row;
+                justify-content: center;
+                gap: 1em;
+            }
+            .swiper-pic{
+                width: 20%;
+                @include media-breakpoint-up("lg"){
+                    width: 10%;
+                }
+                @include media-breakpoint-up("xl"){
+                    width: 5%
+                }
+                img{
+                    @include border-radius('circle');
+                }
+            }
+        }
+        .stars{
+            i{
+                color: color('yellow');
+            }
+        }
+        :root{
+            --swiper-theme-color: #f8b600;
+        }
+    }
+}
+
 .wrap{
     width: 80%;
     margin: 0 auto;
