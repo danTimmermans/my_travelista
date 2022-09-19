@@ -181,7 +181,58 @@
         }
     }
 }
+#customPrice.sectionContent{
+    h2{
+        text-align: center;
+    }
+    a{
+        color: color('white');
+        @extend .btn;
+        @extend .btn-footer-blue;
+        margin: 20px 0 20px 0;
+    }
+    .pic{
+        padding: 0;
+        margin-top: 20px;
+    }
+    @include media-breakpoint-up("lg"){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 50px 150px 30px;
+        h2, p, a{
+            grid-column: 1 / 2;
+        }
+        p{
+            grid-row: 2 / 3; 
+        }
+        a{
+            grid-row: 3 / -1;
+            width: 230px;
+            margin: 0 auto;
+        }
+        .pic-item{
+            grid-column: 2 / 3;
+            grid-row: 1 / -1;
+        }
+        .pic{
+            padding: 0;
+        }
+    }
+    @include media-breakpoint-up("xl"){
+        grid-template-rows: 60px 190px 50px;
+    }
+    @include media-breakpoint-up("xxl"){
+        grid-template-rows: 100px 200px 100px;
+        a{
+            align-self: start;
+        }
+        .pic-item{
+            height: 460px;
+            overflow: hidden;
+        }
+    }
 
+}
 .wrap{
     width: 80%;
     margin: 0 auto;

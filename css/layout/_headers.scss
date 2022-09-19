@@ -12,6 +12,9 @@
         color: color('white');
     }
     padding: space(5);
+    @include media-breakpoint-up("xxl"){
+        padding: space(7);
+    }
     .upperNav{
         @include display-grid(); 
         grid-template-columns: 1fr 1fr;            

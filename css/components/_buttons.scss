@@ -26,7 +26,7 @@
     .btn-#{$color} {
         background-color: $value;
         &:hover {
-            @include mytrans(.5s);
+            @include mytrans(.3s);
             background-color: scale-color($value, $alpha: -20%);
         }
     }

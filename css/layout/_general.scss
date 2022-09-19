@@ -20,6 +20,9 @@ img{
 }
 main div{
     padding: space(5);
+    @include media-breakpoint-up("xxl"){
+        padding: space(7);
+    }
 }
 :root{
     // target the color of the swipper btn and nav dots
