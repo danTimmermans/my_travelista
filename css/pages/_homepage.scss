@@ -181,6 +181,7 @@
         }
     }
 }
+// section custom price
 #customPrice.sectionContent{
     h2{
         text-align: center;
@@ -214,9 +215,6 @@
             grid-column: 2 / 3;
             grid-row: 1 / -1;
         }
-        .pic{
-            padding: 0;
-        }
     }
     @include media-breakpoint-up("xl"){
         grid-template-rows: 60px 190px 50px;
@@ -231,7 +229,59 @@
             overflow: hidden;
         }
     }
-
+}
+// section blog
+#blogSection.sectionContent{
+    .blogContent{
+        padding: 0;
+        margin: 2em 0 2em 0;
+        .pic{
+            padding: 0;
+        }
+        h3, p ,span{
+            margin-top: 2em;
+        }
+        p{
+            text-align: start;
+        }
+        .blogButtons{
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1em;
+            a{
+                @extend .btn;
+                @extend .btn-grey;
+            }
+        }
+    }
+    // display only the center section under 1200px
+    @include media-breakpoint-down("lg"){
+        .blogContent{
+            &:nth-of-type(2n+1){
+                display: none;
+            }
+        }
+    }
+    @include media-breakpoint-up("lg"){
+        grid-template-rows: 40px 40px 1fr;
+        .blogContent{
+            grid-row: 3 / 4;
+            .blogButtons{
+                width: 60%;
+                justify-content: flex-start;
+                gap: 1em;
+            }
+            .pic-blog-focus{
+                overflow: hidden;
+                &:hover{
+                    img{
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
 }
 .wrap{
     width: 80%;
