@@ -187,11 +187,14 @@
     h2{
         text-align: center;
     }
+    p{
+        margin: 2em 0 2em 0;
+    }
     a{
         color: color('white');
         @extend .btn;
         @extend .btn-footer-blue;
-        margin: 20px 0 20px 0;
+        margin: 0 auto;
     }
     .pic{
         padding: 0;
@@ -219,6 +222,9 @@
     }
     @include media-breakpoint-up("xl"){
         grid-template-rows: 60px 190px 50px;
+        p{
+            margin: 0;
+        }
     }
     @include media-breakpoint-up("xxl"){
         grid-template-rows: 100px 200px 100px;
