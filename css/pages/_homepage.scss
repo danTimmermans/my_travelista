@@ -88,6 +88,7 @@
         @include mytrans(.3s);
         width: 100%;
         a{
+            color: color('black');
             display: block;
             margin-top: 1em;
             text-align: center;
@@ -174,11 +175,11 @@
                 }
             }
         }
-        .stars{
-            i{
-                color: color('yellow');
-            }
-        }
+    }
+}
+.stars{
+    i{
+        color: color('yellow');
     }
 }
 // section custom price
@@ -251,7 +252,7 @@
             margin-top: 1em;
             a{
                 @extend .btn;
-                @extend .btn-grey;
+                @extend .btn-yellow;
             }
         }
     }
